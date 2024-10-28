@@ -238,8 +238,6 @@ def sudoku_loop(display):
     running_sudoku = True
     value = 0
 
-    print("Running Sudoku loop")
-
     # initialize sudoku class instance
     sudoku = Sudoku()
 
@@ -345,10 +343,6 @@ def sudoku_loop(display):
                             ])
                         sudoku.sudoku_surface.fill(background_clr)
                     if buttons.get_pos_selected() == 2:
-                        print("Checking if sudoku is correct")
-                        print(check_sudoku(sudoku.get_grid()))
-
-
                         if check_sudoku(sudoku.get_grid() == True):
                             running_sudoku = False
                         break

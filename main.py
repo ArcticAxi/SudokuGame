@@ -220,9 +220,7 @@ def menu_screen():
                         # clears the display
                         game_display.fill(background_clr)
 
-
                         if screen == 0:
-                            print("intro_loop running")
                             scrolling_text.text_loop(game_display, screen, 'raw_texts/intro.txt')
                             screen = scrolling_text.get_screen()
 
@@ -233,18 +231,15 @@ def menu_screen():
                             # intro.intro_loop(game_display, screen)
                             # screen = intro.get_screen()
 
-                            print("running decryption key")
                             scrolling_text.text_loop(game_display, screen, 'raw_texts/decrypting.txt')
                             screen = scrolling_text.get_screen()
 
                             game_display.fill(background_clr)
-                            print("running letter")
                             scrolling_text.text_loop(game_display, screen, 'raw_texts/first_message.txt')
                             screen = scrolling_text.get_screen()
 
                         # runs the sudoku_loop
                         elif screen == 1:
-                            print("sudoku_loop running")
                             sudoku.sudoku_loop(game_display)
 
                         # after exiting, the menu is loaded again
@@ -254,7 +249,6 @@ def menu_screen():
                         break
 
                     if main_menu.get_position() == 1: # here is the Menu class function
-                        print("quiting")
                         pygame.quit()
                         quit()
                 if event.key == K_ESCAPE:

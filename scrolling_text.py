@@ -231,7 +231,6 @@ def text_loop(display, screen, src_text):
                         # rather than overarching mess of a thing going on
 
                         if src_text == 'raw_texts/intro.txt':
-                            print("sudoku_loop running")
                             sudoku.sudoku_loop(display)
                             set_screen(screen + 1)
                             running_intro = False

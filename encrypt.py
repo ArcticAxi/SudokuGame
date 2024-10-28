@@ -16,7 +16,6 @@ def encrypt_files():
 
     # for each .txt in raw_texts, encrypt
     for raw_text in raw_text_files:
-        print(raw_text)
         # opening the original file to encrypt
         with open('./raw_texts/' + raw_text, 'rb') as file:
             original = file.read()
@@ -28,3 +27,5 @@ def encrypt_files():
         # writing the encrypted data
         with open('./encrypted_texts/' + raw_text, 'wb') as encrypted_file:
             encrypted_file.write(encrypted)
+
+encrypt_files()
